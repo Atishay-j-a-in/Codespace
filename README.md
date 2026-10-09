@@ -1,16 +1,75 @@
-# React + Vite
+# Gridlock
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A two-player Tic Tac Toe game for playing on the same device. Players take turns choosing squares, with Player One using `X` and Player Two using `O`.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Local two-player gameplay
+- Turn indicator for the active player
+- Win detection across rows, columns, and diagonals
+- Draw detection when the board is full
+- Winning-cell highlight
+- Score tracking across rounds
+- Alternating starting player between rounds
+- Reset match control
+- Responsive layout for desktop and mobile screens
+- Keyboard-accessible board controls
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Requirements
 
-## Expanding the ESLint configuration
+- Node.js
+- pnpm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Install dependencies
+
+```bash
+pnpm install
+```
+
+### Start the development server
+
+```bash
+pnpm run dev
+```
+
+Vite will print a local URL in the terminal. Open that URL in a browser and pass the device to the other player between turns.
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `pnpm run dev` | Starts the Vite development server |
+| `pnpm run build` | Creates a production build in `dist` |
+| `pnpm run preview` | Serves the production build locally |
+| `pnpm run lint` | Runs ESLint |
+
+## How to play
+
+1. Player One starts with `X`.
+2. Select an empty square on the board.
+3. Player Two takes the next turn with `O`.
+4. The first player to place three symbols in a row wins.
+5. If all nine squares are filled without a winner, the round is a draw.
+6. Select **Play next round** to continue the match. The starting player alternates after each round.
+7. Select **Reset match** during an active round to clear the board and scores.
+
+## Project structure
+
+```text
+src/
+├── assets/
+│   └── hero.png       # Layered visual used in the game introduction
+├── App.jsx            # Game state, board logic, and page layout
+├── App.css            # Game-specific layout and component styles
+├── index.css          # Global theme tokens and base styles
+└── main.jsx           # React application entry point
+```
+
+## Tech stack
+
+- React
+- Vite
+- CSS
+- pnpm
