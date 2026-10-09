@@ -1,0 +1,32 @@
+:root {
+  --paper: #f2eff7;
+  --muted: #918b9c;
+  --line: #302d39;
+  --surface: #201d27;
+  --violet: #b98aff;
+  --violet-dim: #6c4a9f;
+  --violet-faint: rgba(185, 138, 255, .1);
+  --blue: #76d2dd;
+  --sans: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --mono: 'DM Mono', Consolas, monospace;
+  color: var(--paper);
+  background: #15131b;
+  font-family: var(--sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { min-width: 320px; min-height: 100%; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 80% 12%, rgba(91, 57, 139, .14), transparent 30rem),
+    #15131b;
+}
+
+button, a { font: inherit; }
